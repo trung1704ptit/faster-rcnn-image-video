@@ -48,6 +48,8 @@ while(cap.isOpened()):
         # draw boxes and show current frame on screen
         image = detect_utils.draw_boxes(boxes, classes, labels, frame)
 
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
         # get the end time
         end_time = time.time()
         # get the fps
