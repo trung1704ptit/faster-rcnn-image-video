@@ -60,7 +60,7 @@ while(cap.isOpened()):
         frame_count += 1
 
         # press `q` to exit
-        wait_time = max(1, int(fps/4))
+        wait_time = max(1, int(fps))
         cv2.imshow('image', image)
         out.write(image)
         if cv2.waitKey(wait_time) & 0xFF == ord('q'):
